@@ -1,0 +1,21 @@
+.team-wrapper{
+    text-align: center;
+    padding: 32px;
+}
+.team-wrapper h3{
+    font-size: 32px;
+    display: inline-block;
+    padding-bottom: 8px;
+    border-bottom: 4px solid;
+}
+.team-cards{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+/*.team-wrapper h3:after{
+    content:'';
+
+    max-width: 32px;
+    margin: auto;
+}*/

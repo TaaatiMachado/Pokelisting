@@ -1,0 +1,19 @@
+.default-btn{
+    border-radius: 10px;
+    background-color: #DA0037; 
+    padding: 28px 29px;
+    color: #EDEDED;
+    font-weight: 700;
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px; 
+    margin: 40px 0 ;
+    border: none;
+    cursor: pointer;
+    border: 2px solid transparent
+
+}
+.default-btn:hover{
+    background-color: #171717;
+    border-color: #DA0037
+}
