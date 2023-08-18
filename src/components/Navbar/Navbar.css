@@ -3,9 +3,9 @@
     align-items: center;
     justify-content: space-between;
     padding: 15px;
-    border-bottom: 2px solid #DA0037;
+    border-bottom: 2px solid var(--main-red);
     max-width: 100%;
-    background-color: #EDEDED;
+    background-color: var(--light-grey);
     border-radius: 20px;
 }
 .nav-logo{
@@ -40,6 +40,6 @@
     border-bottom: 2px solid transparent;
 }
 .nav-items li:hover{
-    border-bottom: 2px solid #DA0037;
+    border-bottom: 2px solid var(--main-red);
     cursor: pointer;
 }

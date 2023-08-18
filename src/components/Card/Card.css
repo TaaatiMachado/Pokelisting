@@ -5,7 +5,6 @@
 }
 .card-header{
     border-radius: 10px 10px 0px 0px;
-    background: #57C278; 
     max-height: 92px;
     height: 100%;
     padding-top: 42px;
@@ -19,13 +18,13 @@
     object-fit: cover;
 }
 .card-body{
-    background-color: white;
+    background-color: var(--main-white);
     border-radius: 0 0 10px 10px;
     padding: 90px 30px 30px
 }
 
 .card-body h4{
-    color: #171717;
+    color: var(--main-black);
     text-align: center;
     font-family: Montserrat, sans-serif;
     font-size: 18px;
@@ -34,7 +33,7 @@
 }
 
 .card-body h5{
-    color: #212121;
+    color: var(--main-black);
     text-align: center;
     font-family: Montserrat, sans-serif;
     font-size: 16px;
