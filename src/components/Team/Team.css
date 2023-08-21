@@ -1,6 +1,7 @@
 .team-wrapper{
+    position: relative;
     text-align: center;
-    padding: 32px;
+    padding: 20px;
 }
 .team-wrapper h3{
     font-size: 32px;
@@ -12,6 +13,11 @@
     display: flex;
     justify-content: center;
     gap: 20px;
+}
+.color-input {
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 /*.team-wrapper h3:after{
     content:'';

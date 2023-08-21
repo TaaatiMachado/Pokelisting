@@ -9,6 +9,7 @@
     height: 100%;
     padding-top: 42px;
     box-sizing: border-box;
+    position: relative;
 }
 .card-header img{
     border-radius: 50%;
@@ -39,4 +40,33 @@
     font-size: 16px;
     font-weight: 400;
     margin: 0;
+}
+
+.card-delete {
+    border: none;
+    background-color: transparent;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 10px;
+    top: 2px;
+}
+.card-delete:after {
+    content: '';
+    height: 15px;
+    border-left: 2px solid var(--main-white);
+    position: absolute;
+    transform: rotate(45deg);
+}
+
+.card-delete:before {
+    content: '';
+    height: 15px;
+    border-left: 2px solid var(--main-white);
+    position: absolute;
+    transform: rotate(-45deg);
+}
+.card-delete:hover:before, .card-delete:hover:after {
+    border-color: var(--main-red);
+    cursor: pointer;
 }
