@@ -23,7 +23,9 @@
     border-radius: 0 0 10px 10px;
     padding: 90px 30px 30px
 }
-
+.card-body img{
+    margin: 0 5px;
+}
 .card-body h4{
     color: var(--main-black);
     text-align: center;
@@ -66,7 +68,9 @@
     position: absolute;
     transform: rotate(-45deg);
 }
+.card-delete:hover{
+    cursor: pointer;
+}
 .card-delete:hover:before, .card-delete:hover:after {
     border-color: var(--main-red);
-    cursor: pointer;
 }

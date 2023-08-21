@@ -2,12 +2,17 @@
     position: relative;
     text-align: center;
     padding: 20px;
+    background-color: var(--light-grey);
+    border-radius: 20px;
+    padding: 36px 64px;
+    box-shadow: 8px 8px 16px rgb(0, 0, 0, 0.06);
+    margin: 20px;
 }
 .team-wrapper h3{
     font-size: 32px;
     display: inline-block;
     padding-bottom: 8px;
-    border-bottom: 4px solid;
+    border-bottom: 2px solid var(--main-red);
 }
 .team-cards{
     display: flex;

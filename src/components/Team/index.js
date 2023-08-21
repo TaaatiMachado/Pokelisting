@@ -1,6 +1,5 @@
 import Card from '../Card'
 import './Team.css'
-import hexToRgba from 'hex-to-rgba'
 
 const Team = (props)=>{
 
@@ -8,8 +7,8 @@ const Team = (props)=>{
     return (
         props.cards.length > 0 &&
         <>
-        <section className='team-wrapper' style={{backgroundColor: hexToRgba(props.teamPrimColor, 0.4)}}>
-            <h3 style={{borderColor: props.teamPrimColor}}>{props.teamName}</h3>
+        <section className='team-wrapper'>
+            <h3>{props.teamName}</h3>
              <input type='color' className='color-input' value={props.teamPrimColor} onChange={event => props.colorChange(event.target.value, props.id)}/>            
             <div className='team-cards'>
             {props.cards.map(card => {
