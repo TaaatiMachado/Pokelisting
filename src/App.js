@@ -156,12 +156,15 @@ function App() {
       return team
     }))
   }
+  const newTeam = (newTeam) => {
+    setTeams([...teams, {...newTeam, id: uuidv4()}])
 
+  }
 
   return (
     <div className="App">
       <Navbar/>
-      <Form onCardCreation={card => newCard(card)} teams={teams.map(team => team.name)} types={types.map(type => type.name)}/>
+      <Form onCardCreation={card => newCard(card)} teams={teams.map(team => team.name)} types={types.map(type => type.name)} onTeamCreation={newTeam}/>
       <h2 className='main-title'>My Teams</h2>
       {teams.map(team => <Team teamName={team.name} id={team.id} key={team.name} teamPrimColor={team.primColor} types={types} cards={cards.filter(card => card.team === team.name)} onDelete={onCardDelete} colorChange={changeTeamColor}/>)}
       </div>

@@ -1,5 +1,5 @@
 import './Form.css'
-import TextField from '../TextField';
+import Field from '../Field';
 import Dropdown from '../Dropdown';
 import Button from '../Button';
 import { useState } from 'react';
@@ -14,8 +14,17 @@ const Form = (props)=> {
     const [type2, setType2] = useState('')
     const [team, setTeam] = useState('')
     const [id, setId] = useState(uuidv4());
+    const [teamName, setTeamName] = useState('')
+    const [teamColor, setTeamColor] = useState('')
 
+    const savingTeam = (event)=>{
+        event.preventDefault()
+        props.onTeamCreation({name: teamName, color: teamColor})
 
+        setTeamName('');
+        setTeamColor('')
+        
+    }
     const savingForm = (event)=> {
         event.preventDefault();
         props.onCardCreation({
@@ -27,7 +36,6 @@ const Form = (props)=> {
             team,
             id
         })
-        console.log('Foi!', name, number, img, type1, type2, team, id);
 
         setName('');
         setNumber('');
@@ -40,13 +48,20 @@ const Form = (props)=> {
 
     return(
         <section className='form'>
+            <form onSubmit={savingTeam}>
+            <h2>Configure your Pokemon dream team.</h2>
+            <Field type='text' label='Name' placeholder='Add your team name' req={true} inputValue={teamName} changeValue={inputValue => setTeamName(inputValue)}/>
+            <Field type='color' label='Color' placeholder='Add color to your team' inputValue={teamColor} changeValue={inputValue => setTeamColor(inputValue)} />
+            <Button> Ready! </Button>
+            </form>
+
             <form onSubmit={savingForm}>
             <h2>Fill the data about your Pokémon.</h2>
-            <TextField label='Name' placeholder='Add the name' req={true} inputValue={name} changeValue={inputValue => setName(inputValue)}/>
-            <TextField label='Pokédex number' placeholder='Add the number' req={true} inputValue={number} changeValue={inputValue => setNumber(inputValue)}/>
-            <TextField label='Pic' placeholder='Add the URL from your Pokémon picture' inputValue={img} changeValue={inputValue => setImg(inputValue)}/>
+            <Field label='Name' placeholder='Add the name' req={true} inputValue={name} changeValue={inputValue => setName(inputValue)}/>
+            <Field label='Pokédex number' placeholder='Add the number' req={true} inputValue={number} changeValue={inputValue => setNumber(inputValue)}/>
+            <Field label='Pic' placeholder='Add the URL from your Pokémon picture' inputValue={img} changeValue={inputValue => setImg(inputValue)}/>
             <Dropdown itens={props.types} label='Type 1' req={true} value={type1} changeValue={inputValue => setType1(inputValue)} />
-            <Dropdown itens={props.types} label='Type 2' req={false} value={type2} changeValue={inputValue => setType2(inputValue)} />            
+            <Dropdown itens={props.types} label='Type 2' req={true} value={type2} changeValue={inputValue => setType2(inputValue)} />            
             <Dropdown itens={props.teams} label='Team' req={false} value={team} changeValue={inputValue => setTeam(inputValue)} />
             <Button> I choose you! </Button>
             </form>
