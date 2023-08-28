@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Steps to run the Pokelistng project
+## Steps to run the Pokelisting project
 
 ```html
 1- Clone the repository
@@ -10,7 +10,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 3- Fill the info and add the cards
 ```
 ### Status
-This project is the product of a React.js study of Tati Machado, to improve skills and achieve new opportunities.
+This project is the product of React.js studies from Tati Machado, to improve her skills as a Front-end Developer.
 
 ### Contributions
 Suggestions and pull requests are always welcome :)
